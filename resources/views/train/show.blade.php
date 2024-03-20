@@ -26,6 +26,9 @@
                         no
                         @endif
                     </p>
+                    @if($train->in_orario==0)
+                        <p><b>minuti di ritardo: </b>{{$train->minuti_di_ritardo}} min</p>
+                        @endif
                     <p>
                         <b>cancellato: </b>
                         @if($train->cancellato==1)

@@ -11,6 +11,9 @@
           <li class="nav-item">
             <a aria-current="page" @class(['nav-link', 'active' => Route::currentRouteName()=='home']) href="{{route('home')}}">Home</a>
           </li>
+          <li class="nav-item">
+            <a aria-current="page" @class(['nav-link', 'active' => Route::currentRouteName()=='train.index']) href="{{route('train.index')}}">Treni</a>
+          </li>
 
         </ul>
         <form class="d-flex" role="search">

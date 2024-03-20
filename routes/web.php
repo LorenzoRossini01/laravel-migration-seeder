@@ -15,4 +15,6 @@ use App\Http\Controllers\PageController;
 |
 */
 
-Route::get('/', [PageController::class,'index'])->name('home');
+Route::get('/', [PageController::class,'home'])->name('home');
+Route::get('/train', [PageController::class,'index'])->name('train.index');
+Route::get('/train/{train}', [PageController::class,'show'])->name('train.show');

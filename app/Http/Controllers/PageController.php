@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Train;
 use Illuminate\Http\Request;
+use Illuminate\Support\Carbon;
 
 class PageController extends Controller
 {
@@ -12,7 +13,8 @@ class PageController extends Controller
         return view("home");
     }
     public function index(){
-        $trains=Train::all();
+        // $trains=Train::whereDate('orario_di_partenza','=', Carbon::today()->toDateString())->get();
+        $trains=Train::paginate(12);
         return view("train.index", compact("trains"));
     }
     public function show(Train $train){

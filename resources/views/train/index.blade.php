@@ -5,10 +5,10 @@
 @section('main-content')
   <section>
     <div class="container py-4">
-      <div class="row">
+      <div class="row g-3">
         @forelse($trains as $train)
-        <div class="col">
-            <div class="card">
+        <div class="col-4">
+            <div class="card h-100">
                 <div class="card-header">
                     <h3><b>Treno </b>{{$train->codice_treno}}</h3>
                     <p>{{$train->azienda}}</p>
@@ -30,5 +30,6 @@
         @endforelse
       </div>
     </div>
+    {{$trains->links()}}
   </section>
 @endsection
